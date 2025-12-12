@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.6_10-jre-alpine
+FROM openjdk:17-jdk
 RUN addgroup --system wezvatech  && adduser -S -s /usr/sbin/nologin -G wezvatech wezvatech && mkdir -p /opt/wezva
 WORKDIR /opt/wezva
 COPY target/wezvatech-springboot-mysql-9739110917.jar app.jar
