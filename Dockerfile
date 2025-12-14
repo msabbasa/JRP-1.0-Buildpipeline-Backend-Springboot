@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk
+FROM --platform=linux/amd64 openjdk:17-jdk
 RUN addgroup --system wezvatech  && adduser -S -s /usr/sbin/nologin -G wezvatech wezvatech && mkdir -p /opt/wezva
 WORKDIR /opt/wezva
 COPY target/wezvatech-springboot-mysql-9739110917.jar app.jar
